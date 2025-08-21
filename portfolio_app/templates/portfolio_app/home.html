@@ -1,0 +1,15 @@
+{% extends "portfolio_app/base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Hi I'm Suganya S</h1>
+<h2>My Skills:</h2>
+<ul>
+  {% for skill in skills %}
+    {% if skill == "Django" %}
+      <li><strong>{{ skill }}</strong> (Favorite)</li>
+    {% else %}
+      <li>{{ skill }}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endblock %}
